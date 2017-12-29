@@ -1,0 +1,17 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle Navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to "Proclips", root_path, class: "navbar-brand"
+    .collapse.navbar-collapse{id: "navbar"}
+      %ul.nav.navbar-nav
+        %li
+          = link_to "Tournaments", root_path
+        %li
+          = link_to "Leagues", leagues_path
+        %li
+          = link_to "Teams", teams_path

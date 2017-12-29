@@ -1,0 +1,5 @@
+.list-group
+  - @leagues.each do |league|
+    .list-group-item
+      %h3
+        = link_to league.name, league_path(league)

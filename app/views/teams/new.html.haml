@@ -1,0 +1,9 @@
+= simple_form_for(@team) do |f|
+  .form-group
+    = f.input :name, class: "form-control"
+  .form-group
+    = f.input :tag, class: "form-control"
+  .form-group
+    = f.input :league_id, collection: @leagues, label_method: :tag, value: :id, class: "form-control"
+  .form-group
+    = f.submit "Submit", class: "btn btn-success"

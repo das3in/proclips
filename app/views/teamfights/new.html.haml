@@ -1,0 +1,11 @@
+= simple_form_for([@match, @match.teamfights.build]) do |f|
+  .form-group
+    = f.input :start_time_game, class: "form-control"
+  .form-group
+    = f.input :end_time_game, class: "form-control"
+  .form-group
+    = f.input :start_time_youtube, class: "form-control"
+  .form-group
+    = f.input :end_time_youtube, class: "form-control"
+  .form-group
+    = f.submit "Submit", class: "btn btn-success"

@@ -1,0 +1,13 @@
+= simple_form_for(@match) do |f|
+  .form-group
+    = f.input :blue_team_id, collection: @teams, label_method: :tag, value: :id, class: "form-control"
+  .form-group
+    = f.input :red_team_id, collection: @teams, label_method: :tag, value: :id, class: "form-control"
+  .form-group
+    = f.input :winner_id, collection: @teams, label_method: :tag, value: :id, class: "form-control"
+  .form-group
+    = f.input :tournament_id, collection: @tournaments, label_method: :name, value: :id, class: "form-control"
+  .form-group
+    = f.input :youtube_url, class: "form-control"
+  .form-group
+    = f.submit "Submit", class: "btn btn-success"

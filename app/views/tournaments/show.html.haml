@@ -1,0 +1,12 @@
+%h1= @tournament.name
+= link_to "New Match", new_match_path, class: "btn btn-primary"
+.list-group
+  - @tournament.matches.each do |match|
+    .list-group-item
+      .row
+        .col-md-3
+          %h3= match.blue_team.tag
+        .col-md-3
+          %h3 vs
+        .col-md-3
+          %h3= match.red_team.tag

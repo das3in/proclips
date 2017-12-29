@@ -1,0 +1,5 @@
+.list-group
+  - @tournaments.each do |tournament|
+    .list-group-item
+      %h2
+        = link_to tournament.name, tournament_path(tournament)

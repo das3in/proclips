@@ -1,0 +1,8 @@
+%h1= "#{@match.blue_team.name} vs #{@match.red_team.name}"
+= link_to "New Teamfight", new_match_teamfight_path(@match), class: "btn btn-primary"
+%h3 Teamfights
+
+%ul
+  - @match.teamfights.each do |teamfight|
+    %li 
+      %a{href: "#{@match.youtube_url}&t=#{teamfight.start_time_youtube}"}= teamfight.start_time_game
